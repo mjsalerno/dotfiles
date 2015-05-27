@@ -1,0 +1,9 @@
+[user]
+	name = Michael Salerno
+	email = michael.j.salerno@stonybrook.edu
+[push]
+	default = simple
+[alias]
+	whenadded = log --diff-filter=A
+[merge]
+	tool = kdiff3
