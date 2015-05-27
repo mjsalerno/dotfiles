@@ -5,15 +5,6 @@ if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
 
-alias atom='LD_LIBRARY_PATH=/opt/google/chrome ~/apps/atom/share/atom.sh'
-
-export PATH=$PATH:/home/michael/adt/sdk/tools
-export PATH=$PATH:/home/michael/adt/sdk/platform-tools
-export PATH=$PATH:/home/michael/sdk/platform-tools
-export PATH=$PATH:/usr/local/bro/bin
-export JAVA_HOME=/home/michael/jdk1.8.0_11
-
-
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
