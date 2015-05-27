@@ -10,25 +10,25 @@ if [ $? -ne 0 ]; then
     exit
 fi
 
-#get vundle
-git submodule init
-
 #backup existing .vim
 if [ -d "$VIM_HOME" ]; then
-    mkdir -P $BACKUP_DIR 
-    mv -r $VIM_HOME $BACKUPDIR
+    mkdir -p $BACKUP_DIR 
+    mv $VIM_HOME ${BACKUP_DIR}/.vim
 fi
 
 #create new .vim
-mkdir -P ~/.vim/bundle/
+mkdir -p ~/.vim/bundle/
 
-#install vundle
-cp Vundle.vim "$VIM_HOME"/bundle/Vundle.vim
+#get vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+#get the theme so vim wont break
+git clone https://github.com/tomasr/molokai ~/.vim/bundle/molokai
 
 #backup existing .vimrc
 if [ -f $VIMRC ]; then
-    mkdir -P $BACKUP_DIR
-    mv $VIMRC $BACKUP_DIR
+    mkdir -p $BACKUP_DIR
+    mv $VIMRC ${BACKUP_DIR}/.vimrc
 fi
 
 #install awsome .vimrc
@@ -39,5 +39,8 @@ vim +PluginInstall +qall
 
 #tell user to install YCM
 #TODO: do this in the script
-echo Please foolow the instructions at
-echo https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64-super-quick-installation
+echo
+echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+echo % Please foolow the instructions at                                                   %
+echo % https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64-super-quick-installation %
+echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -10,6 +10,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tomasr/molokai'
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'a.vim'
 
