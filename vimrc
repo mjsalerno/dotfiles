@@ -12,6 +12,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tomasr/molokai'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 "Plugin 'a.vim'
 
 call vundle#end()            " required
